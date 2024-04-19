@@ -1,0 +1,52 @@
+.smProfilePicture {
+  width: 60px;
+  border-radius: 50px;
+}
+
+.smNameLogo {
+  font-family: "Satisfy", cursive;
+  font-weight: 900;
+  font-style: normal;
+  margin-left: 10px;
+}
+.smHero {
+  color: #fff;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../images/backImageMain.jpg);
+}
+.smLanguages ul {
+  display: flex;
+  justify-content: center;
+}
+.smLanguages ul li {
+  list-style-type: none;
+}
+
+.smLanguages img {
+  width: 100px;
+  padding: 15px;
+}
+
+.smAboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 400px;
+}
+
+.smAboutMe img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.smAboutMe p {
+  width: 70vw;
+}
