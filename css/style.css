@@ -1,15 +1,15 @@
-.smProfilePicture {
+.profile-picture {
   width: 60px;
   border-radius: 50px;
 }
 
-.smNameLogo {
+.name-logo {
   font-family: "Satisfy", cursive;
   font-weight: 900;
   font-style: normal;
   margin-left: 10px;
 }
-.smHero {
+.hero {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -20,24 +20,24 @@
   background-image: url(../images/backImageMain.jpg);
 }
 
-.smLanguages {
+.languages {
   border-bottom: 1px dashed #1502be;
   height: 75px;
 }
-.smLanguages ul {
+.languages ul {
   display: flex;
   justify-content: center;
 }
-.smLanguages ul li {
+.languages ul li {
   list-style-type: none;
 }
 
-.smLanguages img {
+.languages img {
   width: 75px;
   padding: 3px;
 }
 
-.smAboutMe {
+.about-me {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,46 +45,80 @@
   height: 400px;
 }
 
-.smAboutMe img {
+.about-me img {
   width: 100px;
   height: 100px;
   margin-bottom: 10px;
 }
 
-.smAboutMe p {
+.about-me p {
   width: 70vw;
+  padding: 20px;
 }
 
-.smPortfolio {
+.portfolio {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.smProjects {
-  margin: 0 auto 40px;
-  width: 70vw;
+.projects {
+  width: 100vw;
   display: flex;
+  justify-content: center;
 }
 
-.smProjects .card {
-  width: 200px;
-  margin-right: 50px;
+.projects div {
+  width: 24rem;
 }
 
-.smProjects .card ul {
+.projects .card {
+  margin: 25px;
+}
+
+.projects .card ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.smProjects .card li {
+.projects .card li {
   list-style-type: none;
 }
-.smProjects .card li img {
+.projects .card li img {
   width: 30px;
 }
-.smProjects .card button {
+.projects .card button {
   width: 150px;
   margin: 0 auto 20px;
+}
+
+.contact-form {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 30px 0 30px 110px;
+  background-color: #3a3a3a;
+  color: #fff;
+  margin-top: 30px;
+  background-image: url("../images/emailIcon.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.contact-form button,
+.contact-form label {
+  margin-top: 15px;
+}
+
+/* .contact-form img {
+  width: 60vw;
+} */
+
+.row {
+  --bs-gutter-x: 0;
 }

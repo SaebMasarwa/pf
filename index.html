@@ -19,11 +19,11 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><img
-            class="smProfilePicture"
+            class="profile-picture"
             src="images/profilePicture.png"
             alt=""
           />
-          <span class="smNameLogo">Saeb Masarwa</span>
+          <span class="name-logo">Saeb Masarwa</span>
         </a>
         <button
           class="navbar-toggler"
@@ -56,14 +56,14 @@
       </div>
     </nav>
 
-    <div class="smHero">
+    <div class="hero">
       <h1>Portfolio</h1>
       <p>
         Projects that I worked on and finished through out my fullstack learning
         journey.
       </p>
     </div>
-    <div class="smLanguages">
+    <div class="languages">
       <ul>
         <li>
           <a href=""><img src="images/img-HTML.jpg" alt="HTML Icon" /></a>
@@ -104,8 +104,8 @@
         </li>
       </ul>
     </div>
-    <div class="smAboutMe">
-      <img class="smProfilePicture" src="images/profilePicture.png" alt="" />
+    <div class="about-me">
+      <img class="profile-picture" src="images/profilePicture.png" alt="" />
       <h2>About me</h2>
       <p>
         I have been making wordpress sites since I can remember, learned some
@@ -113,13 +113,15 @@
         studying practical civil engineering and then deciding to get back to
         programming since It seems to come naturally for me.
       </p>
+      <button class="btn btn-success btn-sm">View My Resume</button>
     </div>
-    <div class="smPortfolio">
+    <div class="portfolio">
       <h2>Featured Projects</h2>
       <p>Selected few projects to showcase my past work.</p>
     </div>
-    <div class="smProjects">
-      <div class="card shadow bg-body-tertiary rounded" style="width: 15rem">
+    <!-- Showcasing my projects using bootstrap card and button -->
+    <div class="projects">
+      <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
           class="card-img-top"
@@ -145,7 +147,7 @@
         </ul>
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
-      <div class="card shadow bg-body-tertiary rounded" style="width: 15rem">
+      <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
           class="card-img-top"
@@ -171,7 +173,7 @@
         </ul>
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
-      <div class="card shadow bg-body-tertiary rounded" style="width: 15rem">
+      <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
           class="card-img-top"
@@ -198,8 +200,8 @@
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
     </div>
-    <div class="smProjects">
-      <div class="card shadow bg-body-tertiary rounded" style="width: 15rem">
+    <div class="projects">
+      <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
           class="card-img-top"
@@ -225,7 +227,7 @@
         </ul>
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
-      <div class="card shadow bg-body-tertiary rounded" style="width: 15rem">
+      <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
           class="card-img-top"
@@ -251,7 +253,7 @@
         </ul>
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
-      <div class="card shadow bg-body-tertiary rounded" style="width: 15rem">
+      <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
           class="card-img-top"
@@ -277,6 +279,43 @@
         </ul>
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
+    </div>
+    <div class="contact-form">
+      <h2>Contact us</h2>
+      <p>
+        Use the form below to send us any questions about our services or for a
+        quote.
+      </p>
+      <form>
+        <div class="form-group row">
+          <label for="inputName">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputName"
+            placeholder="1234 Main St"
+          />
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail4">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail4"
+            placeholder="Email"
+          />
+        </div>
+        <div class="form-group row">
+          <label for="inputPhoneNumber">Phone Number</label>
+          <input type="text" class="form-control" id="inputPhoneNumber" />
+        </div>
+
+        <div class="form-group row">
+          <label for="formMessage">Message</label>
+          <textarea class="form-control" id="FormMessage" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
     <footer></footer>
   </body>
