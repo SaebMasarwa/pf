@@ -3,7 +3,7 @@
   border-radius: 50px;
 }
 
-.name-logo {
+#name-logo {
   font-family: "Satisfy", cursive;
   font-weight: 900;
   font-style: normal;
@@ -64,7 +64,7 @@
 }
 
 .projects {
-  width: 100vw;
+  width: 99vw;
   display: flex;
   justify-content: center;
 }
@@ -74,7 +74,7 @@
 }
 
 .projects .card {
-  margin: 25px;
+  margin: 20px;
 }
 
 .projects .card ul {
@@ -94,7 +94,7 @@
 }
 
 .contact-form {
-  width: 100vw;
+  width: 99vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -115,36 +115,53 @@
   margin-top: 15px;
 }
 
-/* .contact-form img {
-  width: 60vw;
-} */
-
 .row {
   --bs-gutter-x: 0;
 }
 
 .social {
-  height: 200px;
+  height: 150px;
+}
+
+.social figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .social figure img {
+  width: 41px;
+} */
+
+.social figcaption {
+  padding-right: 5px;
 }
 
 .social ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0;
 }
 .social li {
   list-style-type: none;
-  padding: 0 30px;
-}
-
-.social li img {
-  display: block;
+  padding: 30px;
+  flex-direction: column;
 }
 
 footer {
-  display: flex;
+  width: 99vw;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  background-color: #000;
+  color: #1ae0ec;
 }
 
 .footerName {
-  justify-content: start;
+  grid-column: 1/2;
+}
+
+.footerReserved {
+  grid-column: 8/9;
 }
