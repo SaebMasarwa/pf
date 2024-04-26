@@ -122,3 +122,29 @@
 .row {
   --bs-gutter-x: 0;
 }
+
+.social {
+  height: 200px;
+}
+
+.social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.social li {
+  list-style-type: none;
+  padding: 0 30px;
+}
+
+.social li img {
+  display: block;
+}
+
+footer {
+  display: flex;
+}
+
+.footerName {
+  justify-content: start;
+}
