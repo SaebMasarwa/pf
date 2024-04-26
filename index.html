@@ -15,8 +15,9 @@
     />
   </head>
   <body>
+    <!-- NavBar  -->
     <nav class="navbar navbar-expand-lg navColor">
-      <div class="container">
+      <div class="container .container-sm">
         <a class="navbar-brand" href="#"
           ><img
             class="profile-picture"
@@ -26,7 +27,7 @@
           <span id="name-logo">Saeb Masarwa</span>
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -55,15 +56,17 @@
         </div>
       </div>
     </nav>
-
-    <div class="hero">
+    <!-- Hero Section -->
+    <div class="hero .container-sm">
       <h1>Portfolio</h1>
       <p>
         Projects that I worked on and finished through out my fullstack learning
         journey.
       </p>
     </div>
-    <div class="languages">
+
+    <!-- Programming Languages & Libraries -->
+    <div class="languages .container-sm">
       <ul>
         <li>
           <a href=""><img src="images/img-HTML.jpg" alt="HTML Icon" /></a>
@@ -104,7 +107,8 @@
         </li>
       </ul>
     </div>
-    <div class="about-me">
+    <!-- About Me Section -->
+    <div class="about-me .container-sm">
       <img class="profile-picture" src="images/profilePicture.png" alt="" />
       <h2>About me</h2>
       <p>
@@ -115,12 +119,13 @@
       </p>
       <button class="btn btn-success btn-sm">View My Resume</button>
     </div>
-    <div class="portfolio">
+    <!-- Porfolio Introduction -->
+    <div class="portfolio .container-sm">
       <h2>Featured Projects</h2>
       <p>Selected few projects to showcase my past work.</p>
     </div>
     <!-- Showcasing my projects using bootstrap card and button -->
-    <div class="projects">
+    <div class="projects .container-sm">
       <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
@@ -200,7 +205,7 @@
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
     </div>
-    <div class="projects">
+    <div class="projects .container-sm">
       <div class="card shadow bg-body-tertiary rounded">
         <img
           src="./images/code.jpg"
@@ -280,7 +285,7 @@
         <button class="btn btn-success btn-sm">Project's Page -></button>
       </div>
     </div>
-    <div class="contact-form">
+    <div class="contact-form .container-sm">
       <h2>Contact us</h2>
       <p>
         Use the form below to send us any questions about our services or for a
@@ -312,12 +317,12 @@
 
         <div class="form-group row">
           <label for="formMessage">Message</label>
-          <textarea class="form-control" id="FormMessage" rows="3"></textarea>
+          <textarea class="form-control" id="formMessage" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
-    <div class="social">
+    <div class="social .container-sm">
       <ul>
         <li>
           <figure class="figure">
@@ -383,5 +388,7 @@
       <div class="footerName">Saeb Masarwa</div>
       <div class="footerReserved">All rights reserved</div>
     </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

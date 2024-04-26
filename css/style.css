@@ -129,14 +129,6 @@
   align-items: center;
 }
 
-/* .social figure img {
-  width: 41px;
-} */
-
-.social figcaption {
-  padding-right: 5px;
-}
-
 .social ul {
   display: flex;
   flex-direction: row;
@@ -152,7 +144,7 @@
 footer {
   width: 99vw;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   background-color: #000;
   color: #1ae0ec;
@@ -160,10 +152,57 @@ footer {
 
 .footerName {
   grid-column: 1/2;
-  margin: auto;
+  padding-left: 10px;
 }
 
 .footerReserved {
   grid-column: 8/9;
-  margin: auto;
+  padding-right: 10px;
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 576px) {
+  .languages {
+    height: fit-content;
+  }
+  .languages ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolio {
+    margin-bottom: 30px;
+  }
+
+  .about-me p {
+    width: fit-content;
+  }
+
+  .projects {
+    display: block;
+  }
+  .contact-form {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    background-image: url(../images/emailIcon.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 165px;
+    padding-top: 150px;
+  }
+
+  .social {
+    height: max-content;
+  }
+
+  .social ul {
+    flex-wrap: wrap;
+  }
+
+  .footerName {
+    padding-left: 10px;
+  }
 }
