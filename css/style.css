@@ -160,8 +160,10 @@ footer {
 
 .footerName {
   grid-column: 1/2;
+  margin: auto;
 }
 
 .footerReserved {
   grid-column: 8/9;
+  margin: auto;
 }
