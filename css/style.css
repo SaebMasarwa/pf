@@ -181,6 +181,11 @@ footer {
   .projects {
     display: block;
   }
+
+  .projects div {
+    width: %100;
+  }
+
   .contact-form {
     width: fit-content;
     display: flex;
