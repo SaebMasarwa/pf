@@ -197,6 +197,7 @@ footer {
     background-repeat: no-repeat;
     background-size: 165px;
     padding-top: 150px;
+    box-sizing: content-box;
   }
 
   .social {
