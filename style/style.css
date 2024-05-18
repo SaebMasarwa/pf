@@ -173,6 +173,31 @@ footer {
   padding-right: 10px;
 }
 
+/* For projects page */
+
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  margin-right: 14px;
+}
+.buttons :active,
+.buttons :visited,
+.buttons :link,
+.buttons :hover {
+  color: #fff;
+  text-decoration: none;
+}
+.project-section {
+  display: flex;
+}
+.project-picture {
+  width: 62vw;
+  margin: 118px auto 184px;
+  box-shadow: 0px 0px 40px #00000066;
+}
+
 /* Responsive for mobile phones */
 @media (max-width: 576px) {
   .languages {

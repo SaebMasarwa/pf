@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Assistant", sans-serif;
+}
+.container {
+  width: 100vw;
+  margin: 0 auto;
+}
+header {
+  background: transparent url("../images/background.png") 0% 0% no-repeat
+    padding-box;
+  width: 80vw;
+  height: 742px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header h1 {
+  color: #d3e10e;
+  font-size: 86px;
+  font-weight: bold;
+}
+
+header p {
+  color: #f9f9f9;
+  font-size: 20px;
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
+  margin-top: 107px;
+  align-items: end;
+  font-weight: bold;
+}
+.form-control label {
+  font-size: 16px;
+  color: #011560;
+}
+
+.form-control input {
+  border: 0;
+  border-bottom: 4px solid #d3e10e;
+  background-color: #f6f6f6;
+  width: 418px;
+  height: 50px;
+}
+
+.form-control button {
+  width: 166px;
+  height: 50px;
+  border: 0;
+  background-color: #d3e10e;
+  color: #011560;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 38px;
+}
+
+@media (max-width: 576px) {
+  header {
+    background: url("../images/mobileBackground.png") no-repeat;
+    background-size: 100%;
+    width: 100vw;
+    height: max-content;
+  }
+
+  header h1 {
+    height: fit-content;
+    visibility: hidden;
+  }
+  header p {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  .form-control {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: end;
+    font-weight: bold;
+  }
+
+  .form-control input {
+    border: 0;
+    border-bottom: 4px solid #d3e10e;
+    background-color: #e5eeff;
+    width: 286px;
+    height: 34px;
+  }
+  .form-control button {
+    width: 286px;
+    height: 34px;
+    margin: 0 auto;
+    margin-top: 23px;
+  }
+  .column {
+    margin: 0 auto;
+  }
+}

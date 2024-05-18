@@ -15,7 +15,7 @@ header img {
   opacity: 0.8;
   position: fixed;
   left: 10%;
-  top: 10%;
+  top: 20%;
   color: #fff;
 }
 
@@ -42,12 +42,26 @@ header img {
   width: 25vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 auto;
+  background-color: #000;
+  border: 0;
+  font-weight: bold;
+  padding: 0;
 }
-
+.form-control label {
+  color: #fff;
+  padding-left: 11px;
+}
+.form-control input {
+  border-radius: 0;
+  background-color: #ffffff;
+}
 .form-control button {
   margin-top: 20px;
+  background-color: #d31c75;
+  border-radius: 0;
+  border: 0;
 }
 
 .form-group {
@@ -59,6 +73,7 @@ header img {
     width: 80vw;
     height: 500px;
     margin: 0 auto;
+    top: 10%;
   }
 
   .form-control {
