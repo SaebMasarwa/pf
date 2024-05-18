@@ -83,8 +83,11 @@ nav {
   justify-content: center;
 }
 
-.projects div {
-  width: 24rem;
+.projects a:visited,
+.projects a:link,
+.projects a:active {
+  color: #fff;
+  text-decoration: none;
 }
 
 .projects .card {

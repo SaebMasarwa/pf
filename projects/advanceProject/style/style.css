@@ -11,17 +11,16 @@ body {
   margin: 0 auto;
 }
 header {
-  background: transparent url("../images/background.png") 0% 0% no-repeat
-    padding-box;
-  width: 80vw;
+  background: transparent url(../images/background.png) no-repeat padding-box;
+  width: 100vw;
   height: 742px;
-  background-repeat: no-repeat;
   margin: 0 auto;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-position: center;
 }
 
 header h1 {
