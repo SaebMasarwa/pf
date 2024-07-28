@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, #49247e, #aa49c7);
+  height: 100vh;
+}
+
+#map {
+  height: 250px;
+  width: 250px;
+  margin-top: 15px;
+}
+
+.wazelogo {
+  height: 100px;
+  width: 100px;
+}
