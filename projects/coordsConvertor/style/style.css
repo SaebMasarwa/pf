@@ -9,6 +9,11 @@ body {
   height: 100vh;
 }
 
+header h1,
+header p {
+  color: white;
+}
+
 #map {
   height: 250px;
   /* width: 250px; */
