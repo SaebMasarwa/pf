@@ -10,12 +10,24 @@ body {
 }
 
 #map {
-  height: 250px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
   margin-top: 15px;
 }
 
 .wazelogo {
   height: 100px;
   width: 100px;
+}
+
+@media (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  #map {
+    width: 100%;
+  }
 }
