@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinates Convertor from IL Grid 05/12 to Waze Link</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <style>
+      #map {
+        height: 800px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="easting">Easting: </label>
+    <input id="easting" name="easting" type="number" />
+    <label for="northing">Northing: </label>
+    <input id="northing" name="northing" type="number" />
+    <button id="convert-coords" onclick="convertCoords()">
+      Convert Coords
+    </button>
+    <div id="waze"></div>
+    <div id="map"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.11.0/proj4.js"
+      integrity="sha512-iJs/hgHOlo6Eo8i+nYtuEPa+CZ6E3C2Z0s1LkSuvLtclMQlqmxPjP6XaXDi0Ki6NsUuQ2Zmo0UeFOLSgjbv5+A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      // var map = L.map("map").setView([51.505, -0.09], 10);
+
+      proj4.defs([
+        [
+          "EPSG:4269",
+          "+title=NAD83 (long/lat) +proj=longlat +a=6378137.0 +b=6356752.31414036 +ellps=GRS80 +datum=NAD83 +units=degrees",
+        ],
+        [
+          "EPSG:4326",
+          "+title=WGS 84 (long/lat) +proj=longlat +ellps=WGS84 +datum=WGS84 +units=degrees",
+        ],
+        [
+          "EPSG:6991",
+          "+title=IL05/12 (long/lat) +proj=tmerc +lat_0=31.7343936111111 +lon_0=35.2045169444444 +k=1.0000067 +x_0=219529.584 +y_0=626907.39 +ellps=GRS80 +units=m +no_defs +type=crs",
+        ],
+        [
+          "EPSG:900913",
+          "+title=GoogleMercator +proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs",
+        ],
+        [
+          "EPSG:2039",
+          "+title=Israel 1993 +proj=tmerc +lat_0=31.7343936111111 +lon_0=35.2045169444444 +k=1.0000067 +x_0=219529.584 +y_0=626907.39 +ellps=GRS80 +units=m +no_defs +type=crs",
+        ],
+      ]);
+
+      function convertCoords() {
+        const easting = +document.getElementById("easting").value;
+        const northing = +document.getElementById("northing").value;
+        console.log(easting);
+        console.log(northing);
+        let convertedCoords = proj4(proj4("EPSG:6991"), proj4("WGS84"), [
+          easting,
+          northing,
+        ]);
+        var map = L.map("map").setView(
+          [convertedCoords[1], convertedCoords[0]],
+          13
+        );
+
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }).addTo(map);
+
+        L.marker([convertedCoords[1], convertedCoords[0]])
+          .addTo(map)
+          .bindPopup("That's where you coordinates are")
+          .openPopup();
+
+        console.log("Converted Coords: " + convertedCoords);
+        document.getElementById(
+          "waze"
+        ).innerHTML = `<a href="https://www.waze.com/ul?ll=${convertedCoords[1]}%2C${convertedCoords[0]}&navigate=yes&zoom=17">Waze</a>`;
+      }
+    </script>
+  </body>
+</html>
