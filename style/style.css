@@ -157,6 +157,10 @@ nav {
   flex-direction: column;
 }
 
+.social a {
+  text-decoration-line: none;
+}
+
 footer {
   width: 100%;
   display: grid;
