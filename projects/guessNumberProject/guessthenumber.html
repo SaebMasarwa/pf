@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <style>
+      #startAgain {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-8">
+        <h1 class="text-danger">Guess the Number</h1>
+        <p>You have 5 attempts to guess number (1-10):</p>
+        <label for="numInput">Your guess:</label>
+        <input type="number" name="numInput" id="numInput" />
+        <button
+          id="checkButton"
+          class="btn btn-outline-success"
+          onclick="checkNum()"
+        >
+          Check
+        </button>
+      </div>
+
+      <div class="col-4">
+        <div class="text-center" id="gameProgress"></div>
+        <button class="btn btn-primary" id="startAgain" onclick="resetGame()">
+          Start again
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const requiredNum = Math.ceil(Math.random() * 10);
+      let allowedAttempts = 5;
+      console.log(requiredNum);
+      function checkNum() {
+        let enteredNum = document.getElementById("numInput").value;
+        if (enteredNum == requiredNum && enteredNum >= 1 && enteredNum <= 10) {
+          document.getElementById("startAgain").style.visibility = "visible";
+          document.getElementById("numInput").setAttribute("disabled", "");
+          document.getElementById("checkButton").setAttribute("disabled", "");
+          document.getElementById("gameProgress").innerHTML +=
+            "<p>Exactly! You won the game, the number is " +
+            requiredNum +
+            ".</p>";
+          allowedAttempts--;
+        } else if (
+          enteredNum > requiredNum &&
+          enteredNum >= 1 &&
+          enteredNum <= 10
+        ) {
+          document.getElementById("gameProgress").innerHTML +=
+            "<p>" + enteredNum + " is too big </p>";
+          allowedAttempts === 0
+            ? (document.getElementById("startAgain").style.visibility =
+                "visible") &&
+              document
+                .getElementById("numInput")
+                .setAttribute("disabled", "") &&
+              document
+                .getElementById("checkButton")
+                .setAttribute("disabled", "")
+            : allowedAttempts--;
+        } else if (
+          enteredNum < requiredNum &&
+          enteredNum >= 1 &&
+          enteredNum <= 10
+        ) {
+          document.getElementById("gameProgress").innerHTML +=
+            "<p>" + enteredNum + " is too small </p>";
+          allowedAttempts === 0
+            ? (document.getElementById("startAgain").style.visibility =
+                "visible") &&
+              document
+                .getElementById("numInput")
+                .setAttribute("disabled", "") &&
+              document
+                .getElementById("checkButton")
+                .setAttribute("disabled", "")
+            : allowedAttempts--;
+        } else {
+          document.getElementById("gameProgress").innerHTML +=
+            "<p>Please enter number between 1-10.</p>";
+        }
+      }
+
+      function resetGame() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

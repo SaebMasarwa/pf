@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - eCommerce</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container w-50 text-center">
+      <h3 class="display-3 text-secondary">
+        PR<i class="fa-solid fa-cart-shopping"></i>DUCTS
+      </h3>
+      <div class="row">
+        <div class="col-sm-5">
+          <input
+            class="form-control"
+            id="item"
+            type="text"
+            placeholder="Item name"
+          />
+        </div>
+        <div class="col-sm-5">
+          <input
+            class="form-control"
+            id="price"
+            type="text"
+            placeholder="Item price"
+          />
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-info px-5" onclick="addRow()">Add</button>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-sm-3">
+          <input
+            class="form-control"
+            type="text"
+            name="category"
+            id="category"
+            placeholder="Enter category"
+          />
+        </div>
+        <div class="col-sm-6">
+          <textarea
+            name="description"
+            id="description"
+            placeholder="describe your product"
+          ></textarea>
+        </div>
+        <div class="col-sm-2">
+          <select name="rating" id="rating">
+            <option value="1">*</option>
+            <option value="2">**</option>
+            <option value="3">***</option>
+            <option value="4">****</option>
+            <option value="5">*****</option>
+          </select>
+        </div>
+      </div>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody id="products"></tbody>
+      </table>
+    </div>
+    <script>
+      function addRow() {
+        let price = document.getElementById("price").value;
+        let item = document.getElementById("item").value;
+        let category = document.getElementById("category").value;
+        let description = document.getElementById("description").value;
+        let rating = document.getElementById("rating").value;
+        document.getElementById("products").innerHTML +=
+          "<tr> <td>" +
+          item +
+          "</td> <td>" +
+          price +
+          "</td><td>" +
+          category +
+          "</td><td>" +
+          description +
+          "</td><td>" +
+          rating +
+          "</td> </tr>";
+      }
+    </script>
+  </body>
+</html>
