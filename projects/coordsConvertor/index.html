@@ -109,7 +109,7 @@
           .bindPopup("That's where you coordinates are")
           .openPopup();
 
-        console.log("Converted Coords: " + convertedCoords);
+        // console.log("Converted Coords: " + convertedCoords);
         document.getElementById(
           "waze"
         ).innerHTML = `<a href="https://www.waze.com/ul?ll=${convertedCoords[1]}%2C${convertedCoords[0]}&navigate=yes&zoom=17"><img class="wazelogo my-3" src="./images/wazeLogo.png" /></a>`;
